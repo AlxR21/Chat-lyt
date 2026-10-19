@@ -5,8 +5,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { toast } from "sonner";
 import { createMessage, deleteMessage, listMessages, updateMessage } from "../action/messages-action";
 
-
-
 /** Load messages for one conversation. */
 export function useMessages(conversationId: string | undefined) {
   return useQuery({

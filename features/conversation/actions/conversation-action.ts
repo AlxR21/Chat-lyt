@@ -32,6 +32,11 @@ export async function listConversation():Promise<ConversationListItem[]>{
     })
 }
 
+export async function getConversation(conversationId: string) {
+    const user = await requireUser();
+    return assertOwnsConversation(conversationId, user.id)
+}
+
 //@param title - Optional title; defaults to "New Chat".
 export async function createConversation(title = "New Chat") {
     const user = await requireUser();

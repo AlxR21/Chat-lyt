@@ -1,11 +1,11 @@
-import { UserButton } from "@clerk/nextjs";
-import { ModeToggle } from "../../components/ui/mode-toggle";
+import React from 'react';
+import {startNewChat} from "@/features/home/action/start-new-chat"
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div>
-      <h1 className="">Hello WOrld</h1> ;<ModeToggle></ModeToggle>
-      <UserButton />
-    </div>
-  );
+const page = async() => {
+  const conversationId = await startNewChat();
+  
+  redirect(`/c/${conversationId}`);
 }
+
+export default page;
