@@ -1,6 +1,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import {getConversation} from '@/features/conversation/actions/conversation-action';
+// import { ConversationView } from '@/features/conversation/components/conversation-view';
 
 
 type ConversationPageProps = {
@@ -24,7 +25,7 @@ const page = async ({params}: ConversationPageProps) => {
     // conversationId={id}
     // initialMessages={initialMessages}
     // />
-    <div>page</div>
+    <div>page {id}</div>
   )
 }
 

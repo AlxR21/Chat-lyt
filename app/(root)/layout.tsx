@@ -6,7 +6,7 @@ import {ChatShell} from "@/features/conversation/components/chat-shell"
 const RootGroupLayout = async({ children}: { children: React.ReactNode}) => {
 
 await auth.protect();
-// await onBoard();
+await onBoard();
 
   return (
     <ChatShell>
