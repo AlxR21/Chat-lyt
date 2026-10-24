@@ -42,6 +42,7 @@ const ConversationView = ({conversationId, initialMessages}: ConversationViewPro
     }
   })
 
+  const title = conversations?.find((item) => item.id === conversationId)?.title ?? "Chat";
   
   return (
     <div className="flex h-full min-h-0 flex-1 flex-col">
